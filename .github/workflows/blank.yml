@@ -10,5 +10,5 @@ jobs:
       - uses: actions/setup-node@v3
       - name: Authenticate to Coveo
         run: npx @coveo/cli auth:token -t=${{ secrets.COVEO_API_KEY }}
-      - name: List organizations
-        run: npx @coveo/cli org:list
+      - name: Deploy to Org
+        run: npx @coveo/cli org:resources:push -p=none
